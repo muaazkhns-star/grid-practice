@@ -1,0 +1,30 @@
+.body{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-rows:100px 100px 100px ;  
+    gap: 24px;
+    
+}
+.b-c{
+    background-color: blanchedalmond;
+    
+    
+}
+.child1{
+    grid-column: span 3;
+}
+.child4{
+    grid-column: span 3;
+}
+.mid-parant{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45px 45px;
+    gap: 8px;
+    background-color: rgb(121, 106, 74);
+    
+}.m-c{
+    background-color: antiquewhite;
+    
+}
+

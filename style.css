@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 24px;
+    padding: 20px;
+   
+}
+
+.b-c {
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child1 {
+    grid-column: span 3;
+}
+
+
+.child4 {
+    grid-column: span 3;
+}
+
+.mid-parant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 45px);
+    gap: 12px;
+    background-color: rgb(121, 106, 74);
+    /* padding: 8px; */
+    border-radius: 12px;
+    padding-top:52px ;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+
+.m-c {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+}
+
+/* LAPTOP */
+@media (min-width: 1024px) {
+    .body {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .mid-parant {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* LARGE MOBILE */
+@media (min-width: 600px) and (max-width: 767px) {
+    .body {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .child1 {
+        grid-column: span 2;
+    }
+
+    .child2 {
+        grid-column: span 2;
+    }
+
+    .mid-parant {
+        grid-column: span 2;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 60px);
+    }
+
+    .child3,
+    .child4 {
+        grid-column: span 1;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 599px) {
+    .body {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .child1,
+    .child2,
+    .child3,
+    .child4 {
+        grid-column: span 1;
+    }
+
+    .mid-parant {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 50px);
+        gap: 8px;
+    }
+}
+
+/* SHORT HEIGHT SCREEN */
+@media (max-height: 500px) {
+    .body {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .mid-parant {
+        grid-template-rows: repeat(2, 35px);
+    }
+}
